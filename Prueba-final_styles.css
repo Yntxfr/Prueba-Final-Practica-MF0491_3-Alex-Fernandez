@@ -1,0 +1,202 @@
+/* Prueba final práctica estilos CSS */
+/* Alumno: Alex Fernandez */
+
+
+/* Paleta de colores:
+    -#006450 (main green)
+    -#FCDC3E (main yellow)
+    -#1B5A50 (secondary green)
+*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header, section .text-left {
+    background: #FCDC3E;
+}
+
+
+/* --------------------------------------------- */
+/* Header bar styles */
+#header-bar {
+    background-color: #006450;
+}
+
+#hdr-name h6 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    color: #FCDC3E;
+    margin-bottom: 0;
+}
+
+#hdr-title h3 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 28px;
+    font-weight: 800;
+    color: #FCDC3E;
+    margin-bottom: 0;
+    transition: all 0.2s ease 0s;
+}
+
+#hdr-btns button, #hdr-btns button {
+    color: #FCDC3E;
+    background-color: #006450;
+    border: 0px;
+}
+
+
+/* --------------------------------------------- */
+/* Ejercicio styles */
+#nutri-block-right, #nutri-block-left {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    color: #FCDC3E;    
+    background-color: #006450;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#nutri-block-left p {
+    color: white;
+    padding: 10px 0;
+}
+
+main button {
+    color: #FCDC3E;
+    padding: 10px;
+    background-color: #006450;
+    border: 1px solid #FCDC3E;
+    border-radius: 10px;
+}
+
+
+input[type="text"], select, button {
+    padding: 0.5rem;
+    padding-right: 30px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #FCDC3E;
+    padding: 0.5rem;
+    
+}
+
+th {
+    background-color: #1B5A50;
+    color: #FCDC3E;
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        font-size: small;
+    }
+}
+
+/* Estilos para mensajes de error */
+.error {
+    color: red;
+    font-style: italic;
+}
+
+
+/* --------------------------------------------- */
+/* Ball styles */
+.ball {
+    padding: 90px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transformer {
+    content: "";
+    width: 80px;
+    height: 80px;
+    bottom: 50%;
+    left: 50%;
+    position: absolute;
+    border-radius: 50%;
+    background: #3e31fa;
+    animation: ball-bounce 0.3s ease-in-out infinite alternate;
+}
+
+.ball img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    animation: glitch-it 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+    infinite;
+    z-index: -2;
+}
+
+
+/* --------------------------------------------- */
+/* Ball animation */ 
+@keyframes ball-bounce {
+    0% {
+      transform: scale(1, 0.7);
+    }
+  
+    40% {
+      transform: scale(0.8, 1.2);
+    }
+  
+    60% {
+      transform: scale(1, 1);
+    }
+  
+    100% {
+      bottom: 140px;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* Footer bar styles */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer-bar {
+    background-color: #1B5A50;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    margin-top: 200px;
+    padding: 30px;
+}
+
+#ftr-title h6 {
+    font-size: 14px;
+    margin-bottom: 0;
+
+}
+
+
+/* --------------------------------------------- */
+/* Otros */
+.instruction {
+    font-style: italic;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
